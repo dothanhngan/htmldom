@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tra cứu kết quả giá trái cây </title>
+    <style>
+    .all{
+        width: 40%;
+        background: yellow ;
+        margin: auto;
+    } 
+    #result {
+                font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div class=" all">
+        <h2> TRA CỨU GIÁ HOA QUẢ </h2>
+        <select name="priceFruit " id="priceFruit ">
+            <option disabled selected value="0"> chọn một loại</option>
+            <option value="quaoi"> ổi</option>
+            <option value="duahau"> dưa hấu</option>
+            <option value="apple"> táo</option>
+            <option value="mango"> xoài</option>
+            <option value="orgin"> cam</option>
+            <option value="chomchom"> chôm chôm </option>
+            <option value="mangcut"> măng cụt</option>
+        </select>
+        <button id="lookup"> xem giá </button>
+        <p id="result"> KET QUA </p>
+    </div>
+    <script>
+        document.getElementById( "lookup").addEventListener('click',function(){
+            let priceFruit= document.getElementById("priceFruit ").value;
+            let result= document.getElementById( "result");
+            switch (priceFruit){
+                case "quaoi":
+                case "duahau":
+                result.innerHTML = " giá : 20.000 vnd/1kg";
+                break;
+                case "apple":
+                    case "mango":
+                    result.innerHTML = 'Giá : 30.000 VNĐ/kg';
+            break;
+            case"orgin":
+            case "chomchom":
+            result.innerHTML = " gia : 50.000vnd/1kg";
+                break;
+                case "mangcut":
+            result.innerHTML= "gia 60.000vnd/1kg";
+                    break;
+                    default :alert( " không hợp lệ ");
+                 }
+                 console.log( priceFruit);
+        });
+    </script>
+     
+
+
+</body>
+</html>
